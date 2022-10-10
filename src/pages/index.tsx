@@ -3,7 +3,6 @@ import { mapData } from "../api/map-data";
 import { Home } from "../templates/Home";
 
 export default function Index({ data = null }: IndexProps) {
-  console.log(data);
   return <Home data={data} />;
 }
 

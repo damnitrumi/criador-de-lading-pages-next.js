@@ -1,6 +1,6 @@
 Esse projeto é uma nova versão do projeto iniciado em curso da Udemy, onde criamos uma aplicação que cria landing pages de formas variadas, utilizando todos os conceitos react.js aprendidos até o momento.
 
-Essa versão utiliza alguns features de next.js, e migramos também para typescript
+Essa versão utiliza alguns features de next.js, e migramos também para typescript.
 
 O projeto consumia uma API própria a qual não tenho mais acesso, porém, por motivos de aprendizado, deixarei o código aqui.
 
