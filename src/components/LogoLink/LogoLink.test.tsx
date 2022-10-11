@@ -34,6 +34,21 @@ describe("<LogoLink/>", () => {
     );
   });
 
+  it("should render in a new tab", () => {
+    renderTheme(
+      <LogoLink
+        link="/target"
+        text="Olá mundo"
+        srcImg="image.jpg"
+        newTab={true}
+      />
+    );
+    expect(screen.getByAltText("Olá mundo")).toHaveAttribute(
+      "src",
+      "image.jpg"
+    );
+  });
+
   it("should render render internal link with text only", () => {
     renderTheme(<LogoLink link="/target" text="Olá mundo" />);
     expect(

@@ -12,12 +12,11 @@ import Head from "next/head";
 import { MenuProps } from "../../components/Menu";
 import { LogoLinkProps } from "../../components/LogoLink";
 
-export type SectionProps = (
+export type SectionProps =
   | GridTwoColumnsProps
   | GridContentProps
   | GridTextProps
-  | GridImageProps
-) & { component: string };
+  | GridImageProps;
 
 export type HomeProps = {
   data: {

@@ -1,4 +1,11 @@
-export const mapSections = (sections = []) => {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { GridContentProps } from "../components/GridContent";
+import { GridImageElementProps, GridImageProps } from "../components/GridImage";
+import { GridTextElementProps, GridTextProps } from "../components/GridText";
+import { GridTwoColumnsProps } from "../components/GridTwoColumns";
+import { SectionProps } from "../templates/Home";
+
+export const mapSections = (sections = []): SectionProps[] => {
   return sections.map((section) => {
     if (section.__component === "section.section-two-columns") {
       return mapSectionTwoColumns(section);
@@ -22,7 +29,9 @@ export const mapSections = (sections = []) => {
   });
 };
 
-export const mapSectionTwoColumns = (section = {}) => {
+export const mapSectionTwoColumns = (
+  section = {} as any
+): GridTwoColumnsProps => {
   const {
     __component: component = "",
     title = "",
@@ -41,7 +50,7 @@ export const mapSectionTwoColumns = (section = {}) => {
   };
 };
 
-export const mapSectionContent = (section = {}) => {
+export const mapSectionContent = (section = {} as any): GridContentProps => {
   const {
     __component: component = "",
     title = "",
@@ -58,10 +67,9 @@ export const mapSectionContent = (section = {}) => {
   };
 };
 
-export const mapTextGrid = (section = {}) => {
+export const mapTextGrid = (section = {} as any): GridTextProps => {
   const {
     // eslint-disable-next-line no-unused-vars
-    __component: component = "",
     title = "",
     description = "",
     metadata: { background = false, section_id: sectionId = "" } = false,
@@ -74,7 +82,7 @@ export const mapTextGrid = (section = {}) => {
     background,
     sectionId,
     description,
-    grid: grid.map((text) => {
+    grid: grid.map((text: any): GridTextElementProps => {
       const { title = "", description = "" } = text;
       return {
         title,
@@ -84,10 +92,9 @@ export const mapTextGrid = (section = {}) => {
   };
 };
 
-export const mapImageGrid = (section = {}) => {
+export const mapImageGrid = (section = {} as any): GridImageProps => {
   const {
     // eslint-disable-next-line no-unused-vars
-    __component: component = "",
     title = "",
     description = "",
     metadata: { background = false, section_id: sectionId = "" } = false,
@@ -100,7 +107,7 @@ export const mapImageGrid = (section = {}) => {
     background,
     sectionId,
     description,
-    grid: grid.map((img) => {
+    grid: grid.map((img: any): GridImageElementProps => {
       const {
         image: { url: srcImg = "", alternativeText: altText = "" } = "",
       } = img;

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { mapMenu } from "./map-menu";
 import { mapSections } from "./map-sections";
 
