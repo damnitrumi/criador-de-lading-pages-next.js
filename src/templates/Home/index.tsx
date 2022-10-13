@@ -28,9 +28,6 @@ export type HomeProps = {
   };
 };
 
-const a = 1;
-a;
-
 export function Home({ data }: HomeProps) {
   if (data === undefined) {
     return <PageNotFound />;
