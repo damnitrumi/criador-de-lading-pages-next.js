@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/api/map-data.js", "src/templates/Base/styles.js", "src/templates/Base/Base.test.jsx"  ],
   "exclude": [
     "node_modules"
   ]

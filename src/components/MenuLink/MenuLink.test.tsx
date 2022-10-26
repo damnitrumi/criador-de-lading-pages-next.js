@@ -70,7 +70,7 @@ describe("<MenuLink/>", () => {
 
       <a
         class="c0"
-        href="http://localhost/"
+        href="http://localhost"
         target="_self"
       >
         Children

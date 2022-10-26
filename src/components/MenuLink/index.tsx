@@ -21,8 +21,8 @@ export const MenuLink = ({ children, link, newTab = false }: MenuLinkProps) => {
   }
 
   return (
-    <Link href={link} passHref>
-      <Styled.Container target={target}>{children}</Styled.Container>
-    </Link>
+    <Styled.Container href={link} target={target}>
+      {children}
+    </Styled.Container>
   );
 };

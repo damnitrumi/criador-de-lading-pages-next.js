@@ -10,7 +10,7 @@ describe("<LogoLink/>", () => {
     ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Olá mundo" })).toHaveAttribute(
       "href",
-      "/#target"
+      "#target"
     );
   });
 

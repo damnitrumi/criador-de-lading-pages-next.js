@@ -30,7 +30,8 @@ exports[`<LogoLink/> should match snapshot 1`] = `
 >
   <a
     class="c1"
-    href="/#target"
+    href="#target"
+    target="_self"
   >
     <img
       alt="Olá mundo"

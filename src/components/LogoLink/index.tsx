@@ -33,12 +33,10 @@ export const LogoLink = ({
 
   return (
     <Heading size="small" uppercase>
-      <Link href={link} passHref>
-        <Styled.Container>
-          {!!srcImg && <img src={srcImg} alt={text} />}
-          {!srcImg && text}
-        </Styled.Container>
-      </Link>
+      <Styled.Container href={link} target={target}>
+        {!!srcImg && <img src={srcImg} alt={text} />}
+        {!srcImg && text}
+      </Styled.Container>
     </Heading>
   );
 };
